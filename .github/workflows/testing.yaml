@@ -1,11 +1,6 @@
 name: testing application
 on:
   workflow_dispatch: {}
-  push:
-    branches: [ "master", "bors/staging", "staging" ]
-  pull_request:
-    branches: [ "master", "staging", "bors/staging" ]
-
 permissions:
   contents: read
 
