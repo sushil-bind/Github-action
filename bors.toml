@@ -1,1 +1,1 @@
-status = ["ci"]
+pr_status = ["ci"]
