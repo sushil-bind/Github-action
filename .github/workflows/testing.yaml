@@ -2,9 +2,9 @@ name: testing application
 on:
   workflow_dispatch: {}
   push:
-    branches: [ "master", "bors/staging", "staging" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "master", "staging", "bors/staging" ]
+    branches: [ "master" ]
 
 permissions:
   contents: read
