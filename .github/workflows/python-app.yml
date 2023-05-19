@@ -5,9 +5,9 @@ name: Python application
 on:
   workflow_dispatch: {}
   push:
-    branches: [ "main" ]
+    branches: [ "master", "bors/staging", "staging" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master", "staging", "bors/staging" ]
 
 permissions:
   contents: read
