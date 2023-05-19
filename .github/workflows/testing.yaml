@@ -1,0 +1,25 @@
+name: testing application
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [ "master", "bors/staging", "staging" ]
+  pull_request:
+    branches: [ "master", "staging", "bors/staging" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: ci
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Run Script
+      run: |
+        python3 sk.py
