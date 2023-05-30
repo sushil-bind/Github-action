@@ -1,1 +1,2 @@
-pr_status = ["pi"]
+status= ["ci"]
+pr_status = ["pi","di"]
