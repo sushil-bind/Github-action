@@ -2,7 +2,7 @@ name: testing application
 on:
   workflow_dispatch: {}
   push:
-    branches: [ "master", "staging" ]
+    branches: "*"
 
 permissions:
   contents: read
