@@ -22,7 +22,6 @@ jobs:
   build:
     name: pi
     needs: paths-filter
-    if: needs.paths-filter.outputs.output1 == 'true'
     runs-on: ubuntu-latest
 
     steps:
@@ -33,11 +32,13 @@ jobs:
         python-version: "3.10"
     - name: Run Script
       run: |
-        exit 0
+        if (${{ needs.paths-filter.outputs.output1 }} == 'false')
+        then exit 0
+        else 
+        echo hello
+        fi
   sheild:
     name: di
-    needs: paths-filter
-    if: needs.paths-filter.outputs.output1 == 'true'
     runs-on: ubuntu-latest
 
     steps:
