@@ -34,6 +34,9 @@ jobs:
       if: needs.paths-filter.outputs.output1 == 'true' 
       run: |
         echo hello
+    - name: Run next
+      run: |
+        echo hello 
   sheild:
     name: di
     runs-on: ubuntu-latest
