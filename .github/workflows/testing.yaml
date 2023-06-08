@@ -31,12 +31,9 @@ jobs:
       with:
         python-version: "3.10"
     - name: Run Script
+      if: needs.paths-filter.outputs.output1 == 'true' 
       run: |
-        if [ ${{ needs.paths-filter.outputs.output1 }} == false ]
-        then exit 0
-        else 
         echo hello
-        fi
   sheild:
     name: di
     runs-on: ubuntu-latest
