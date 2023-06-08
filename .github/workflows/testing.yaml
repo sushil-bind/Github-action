@@ -35,7 +35,7 @@ jobs:
       run: |
         echo hello
     - name: Run next
-      if: success()
+      if: skipped() == true
       run: |
         echo hello 
   sheild:
