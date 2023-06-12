@@ -1,8 +1,11 @@
 name: testing application
 on:
   workflow_dispatch: {}
-  push:
-    branches: "*"
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    
 permissions:
   contents: read
 
