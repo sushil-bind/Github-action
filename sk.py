@@ -1,1 +1,2 @@
-print("sushil kumar bind yugabyte ex mindticklesc oakay")
+print("sushil kumar bind yugabyte ex mindtickle loll")
+
